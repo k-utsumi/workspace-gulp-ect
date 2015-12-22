@@ -1,0 +1,43 @@
+<% block 'title'        : %>titletitle<% end %>
+<% block 'keywords'     : %><% end %>
+<% block 'description'  : %>descriptiondescription<% end %>
+<% block 'Pages Script' : %>
+<script>
+  $(".panel-body").matchHeight();
+</script>
+<% end %>
+
+<% extend '_layouts/default.ect' %>
+
+<div class="qc-docs-header">
+  <div class="container">
+    <h1 class="page-header"><%= content 'title' %></h1>
+    <p><%= content 'description' %></p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>hogehoge</h2>
+
+  <p>hogehoge</p>
+
+  <section>
+    <h3>hogehoge</h3>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+  </section>
+
+  <section>
+    <h3>hogehoge</h3>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+    <p>hogehoge</p>
+  </section>
+</div>

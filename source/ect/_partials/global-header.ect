@@ -1,0 +1,27 @@
+<header class="global">
+  <div class="container">
+    <span class="logo">Logo</span>
+  </div>
+</header>
+<% if @navSub: %>
+<nav class="nav-sub">
+  <div class="container">
+    <ul>
+      <li class="active"><a href="xxxxxxxxxx">xxxxxxxxxx</a></li>
+      <li><a href="xxxxxxxxxx">xxxxxxxxxx</a></li>
+    </ul>
+  </div>
+</nav>
+<% else: %>
+<nav class="nav-breadcrumb">
+  <div class="container">
+    <ul>
+      <li><a href="xxxxxxxxxx">xxxxxxxxxx</a>
+        <ul>
+          <li>xxxxxxxxxx</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<% end %>

@@ -1,0 +1,14 @@
+node_modules
+
+# バグがあり、gulp-ect index.js を直接編集しているため ignore を解除
+! node_modules/gulp-ect/index.js
+
+# Sass のログファイル
+.sass-cache
+
+# Bower ファイル
+bower_components/
+
+# 書き出しディレクトリ兼ローカルテスト用ディレクトリ
+htdocs/
+! *.html

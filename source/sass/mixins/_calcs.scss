@@ -1,0 +1,19 @@
+@function calc-parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin calc-rem($property, $values) {
+  $rem: ();
+
+  @each $value in $values {
+    @if $value == 0 or $value == auto {
+      $rem: append($rem, $value);
+    }
+    @else {
+      $val: calc-parseInt($value);
+      $rem: append($rem, ($val / calc-parseInt($font-size-base) + rem));
+    }
+  }
+
+  #{$property}: $rem;
+}

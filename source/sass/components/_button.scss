@@ -1,0 +1,62 @@
+// _button.scss
+// ==================================================
+
+.button-main {
+  @include card-default(13px, $color-btn-background-default);
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+
+  [class*="icon-"] {
+    display: inline-block;  // for Scalable
+    @include calc-rem(margin-right, 3px);
+    @include calc-rem(vertical-align, -2px);
+    @include calc-rem(font-size, 17px);
+  }
+}
+
+.button-text {
+  border-radius: $border-radius-base;
+  @include calc-rem(padding, 10px 21px 10px 12px);
+  text-align: left;
+  @include calc-rem(line-height, 24px);
+  transition: .2s;
+
+  // background-color: $color-btn-other-background-hover;  // クリック範囲確認用
+
+  &:hover,
+  &:focus { background-color: $color-btn-other-background-hover }
+
+  [class*="icon-"] {
+    @include calc-rem(margin-right, 3px);
+    @include calc-rem(vertical-align, -2px);
+    @include calc-rem(font-size, 17px);
+  }
+}
+
+.button-weak {
+  @include card-default(15px 13px, #fafafa);
+  display: block;
+  width: 100%;
+  color: $color-gray-light;
+  text-align: center;
+  @include calc-rem(font-size, 12px);
+  transition: .2s;
+
+  &.toggled {
+    background-color: $color-gray-lighter;
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #e0e0e0;
+  }
+
+  [class*="icon-"] {
+    @include calc-rem(margin-right, 3px);
+    @include calc-rem(vertical-align, -2px);
+    @include calc-rem(font-size, 17px);
+  }
+}

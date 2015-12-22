@@ -1,0 +1,77 @@
+<%
+
+  # サイト全体に関わる変数は全て、gulpfile の ectData で設定しています。
+
+  # ページタイトルの設定 （サイト名を付け足す）
+  pageTitle = content 'title'
+  pageTitle = if pageTitle then pageTitle + ' / ' + @siteTitle else @siteTitle
+
+  # timestamp の設定 for CSS and JS
+  timestamp = "?t=" + (new Date() / 1000 | 0);
+  timestamp = "";
+
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= pageTitle %></title>
+    <meta name="keywords"    content="xxxxxxxxxx共通キーワードxxxxxxxxxx<%=
+      if content 'keywords' then ', ' + content 'keywords' %>">
+    <meta name="description" content="<%= content 'description' %>">
+    <meta name="referrer" content="unsafe-url">
+
+    <link rel="canonical" href="<%= @siteURL + @pagePath %>">
+
+    <link rel="stylesheet" href="<%= @pathAssets %>css/style.css<%= timestamp %>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+      // GA
+    </script>
+  </head>
+  <body><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <a id="top"></a><a class="nav-skippy" href="#content"><div class="container"><span>メインコンテンツへスキップする</span></div></a>
+<% include '_partials/global-header.ect', { navSub: content 'navSub' } %>
+
+
+
+    <div class="container">
+      <main class="content-main" id="content" tabindex="-1"><% content %></main>
+      <div  class="content-sub">
+        <p>Sub Column</p>
+      </div>
+    </div>
+
+    <footer class="global">
+      <div class="container">
+        <nav class="nav-top"><a href="#top">Top <i class="fa fa-arrow-up"></i></a></nav>
+        <small class="copyright">&copy; <span class="logo">xxxxxxxxxx</span> Inc.</small>
+        <ul>
+          <li><a href="#">利用規約</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="<%= @pathAssets %>js/script.js<%= timestamp %>"></script>
+<%- content 'Pages Script' %>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

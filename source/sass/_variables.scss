@@ -1,0 +1,105 @@
+// _variables.scss
+// ==================================================
+//   Table Of Contents
+// --------------------------------------------------
+//   Layouts
+//   Font Sizes
+//   Colors
+//   Border Radius
+// ==================================================
+
+
+
+// Level 1
+// --------------------------------------------------
+
+
+// _________________________ Level 2
+
+// _____ Level 3 _____
+
+// Level 4
+
+// _ Level 5
+
+// __ Level 6
+
+
+
+// Layouts
+// --------------------------------------------------
+$width-grid-gutter:    24px;
+$width-grid-gutter-sp: $width-grid-gutter / 2;
+
+$width-container:   1180px;
+$width-content-sub:  320px;
+
+
+// _________________________ Screen Size
+// スマートフォン表示時のスタイルを通常適用し、PC のスタイルをメディアクエリで上書く
+$screen-xs-min: 480px;
+$screen-sm-min: 768px + $width-grid-gutter * 2;
+$screen-md-min: 992px;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+
+
+
+// Font
+// --------------------------------------------------
+
+
+// _________________________ Family
+$font-family-sans-serif:  Roboto, "Helvetica Neue", sans-serif;
+$font-family-base:        "Hiragino Sans", "Hiragino Kaku Gothic Pro", meiryo, $font-family-sans-serif;
+
+$font-family-logo:        Avenir, "Helvetica Neue", sans-serif;
+
+
+// _________________________ Size
+$font-size-base: 15px;
+
+
+// _________________________ Weight for Hiragino Snas
+$font-weight-base:   300;
+$font-weight-bolder: 600;
+
+
+
+// Colors
+// --------------------------------------------------
+$color-logo-01: #79bc32;
+$color-logo-02: #2c9054;
+
+$color-border-base:    #e0e0e0;
+// $color-border-light:   #e0e0e0;
+// $color-border-lighter: #e0e0e0;
+
+$color-gray-base:      #555;
+$color-gray-light:     #999;
+$color-gray-lighter:   #bdbdbd;
+
+
+// _________________________ Link
+$color-link-background-hover: #fffef2;
+
+
+// _________________________ Layout Elements
+$color-global-footer: #5a5a5a;
+
+
+// _________________________ Button
+$color-btn-background-default: #3683d2;
+
+$color-btn-other-background-hover: #f5f5f5;
+
+$color-btn-icon-default: #cad5df;
+
+
+
+// Border Radius
+// --------------------------------------------------
+$border-radius-small: 2px;
+$border-radius-base:  4px;
+$border-radius-large: 6px;

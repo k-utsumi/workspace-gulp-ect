@@ -1,0 +1,20 @@
+<% block 'title'        : %>titletitle<% end %>
+<% block 'keywords'     : %><% end %>
+<% block 'description'  : %>descriptiondescription<% end %>
+<% block 'Pages Script' : %><% end %>
+<% block 'navSub'       : %><% end %>
+
+<% extend '_layouts/default.ect' %>
+
+
+<header class="headline">
+  <p>hoge</p>
+  <ul class="headline-action">
+    <li><a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="xxxxxxxxxx" data-related="xxxxxxxxxx">Tweet</a></li>
+    <li><div class="fb-like" data-layout="button_count"></div></li>
+  </ul>
+</header>
+
+<section>
+<% include '_partials/component-group.ect' %>
+</section>

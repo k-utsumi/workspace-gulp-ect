@@ -1,0 +1,105 @@
+// _base.scss
+// ==================================================
+//   Table Of Contents
+// --------------------------------------------------
+//   Base
+//   Text
+// ==================================================
+
+
+
+// Level_1
+// --------------------------------------------------
+
+
+// _________________________ Level_2
+
+// _____ Level_3 _____
+
+// Level_4
+
+// _ Level_5
+
+// __ Level_6
+
+
+// _________________________ Vendor Prefix
+//  -webkit-hoge: fuga;
+//          hoge: fuga;
+
+
+
+// Base
+// --------------------------------------------------
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html { font-size: $font-size-base }
+
+body {
+  $line-height: calc-parseInt(22 / $font-size-base);
+
+  overflow-y: scroll;
+  background-color: #f6f6f6;
+  font: $font-weight-base 100%/#{$line-height} $font-family-base;
+
+  word-break: break-all;
+  word-wrap : break-word;
+  overflow-wrap: break-word;
+
+  text-align: justify;
+
+  // -webkit-font-smoothing: antialiased;
+
+  // -webkit-text-size-adjust: 100%; included in normalize.css
+
+  // リンクタップ時の背景色
+  -webkit-tap-highlight-color: fade-out($color-logo-01, .8);
+}
+// 選択箇所の色
+::selection {
+  background-color: $color-logo-01;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: $font-weight-bolder }
+
+small { font-size: inherit }
+cite { font-style: inherit }
+
+iframe { vertical-align: bottom }
+
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+
+.clearfix { @include clearfix }
+
+
+
+// Text
+// --------------------------------------------------
+.text-left   { text-align: left   }
+.text-center { text-align: center }
+.text-right  { text-align: right  }
+
+
+
+// for Accessibility
+// --------------------------------------------------
+
+// for Screen Reader's Hide Element
+.text-screen-reader {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+}
