@@ -49,7 +49,7 @@ var
 
 
 gulp.task("default", ["js", "sass", "ect", "watch"]); // 通常時
-gulp.task("all", ["init", "js", "sass", "imagemin", "ect", "watch"]); // 全部
+gulp.task("all", ["init", "js", "sass", "imagemin", "ect", "watch", "browser-sync"]); // 全部
 gulp.task("out", ["init", "js", "sass", "imagemin", "ect"]); // 書き出しのみ
 
 // _init 内のファイルを path.dis 内に格納 ＋ α
